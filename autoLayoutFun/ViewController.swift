@@ -26,7 +26,7 @@ import UIKit
 // view have instrinsic content size values that can be used as implicit constraints for width and height
 // makes our job easier if we only have to define constraints for position
 // what is a container view? a view that contains other views
-
+// if the screen grows or shrinks in size, there has to be a rule about which view occupies the extra space or which view is the first to shrink in size
 
 class ViewController: UIViewController {
 
