@@ -28,6 +28,18 @@ import UIKit
 // what is a container view? a view that contains other views
 // if the screen grows or shrinks in size, there has to be a rule about which view occupies the extra space or which view is the first to shrink in size
 
+// 10/9 continued
+// so far when we use stack view, we specified "fill equally" for our distribution
+// but what if we want say a button to be twice as big as another button?
+// 2 ways to do this
+// first approach is specifying a multiplier as part of an equal height and equal width constraint
+// this is done in ADS book, do the calc lab at the end of the autolayout section
+// 2. specifying content hugging and compression resistance priorities
+// suppose we have two views and we want to specify which one will fill extra space and which one will shrink if we lose space
+// content hugging priority: this is like a rubber band that keeps a view "hugging" its intrinsic content size
+// the higher the CHP the more likely the view will stay small
+// compress resistance priority: the higher the CRP, the more likely the view will resist getting small
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
