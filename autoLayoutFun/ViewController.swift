@@ -41,12 +41,20 @@ import UIKit
 // compress resistance priority: the higher the CRP, the more likely the view will resist getting small
 
 class ViewController: UIViewController {
-
+    @IBOutlet var buttons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        print("button is pressed \(sender.tag)")
+        // we want to figure out which button is pressed
+        // 2 ways
+        // using tags: every view has a tag property where we can store some information like an integer value
+        if let index = buttons.index(of: sender) {
+            print(index)
+        }
+    }
 }
 
